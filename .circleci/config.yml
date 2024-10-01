@@ -31,18 +31,24 @@ jobs:
       - run:
           name: deploy
           command: '#e.g. ./deploy.sh'
-workflows:
-  version: 2
-  build-and-publish:
-    jobs:
-      - publish:
-          filters:
-            branches:
-              only: master
+  workflows:
+    version: 2
+    build-master:
+      jobs:
+        - build:
+            filters:
+              branches:
+                only: master
+        - publish-latest:
+            requires:
+              - build
+            filters:
+              branches:
+                only: master
 #workflows:
  # build-and-test:
   #  jobs:
-      - test-java
+     # - test-java
     # - deploy:
     #     requires:
     #       - test-java
