@@ -38,7 +38,8 @@ jobs:
       - checkout
       - run:
           name: Publish latest version
-
+          command: |
+            echo "Publishing latest version"
 
 workflows:
   version: 2
