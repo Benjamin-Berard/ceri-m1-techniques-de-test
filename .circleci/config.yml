@@ -22,23 +22,31 @@ jobs:
           paths:
             - ~/.m2/repository
 
-  deploy:
+  build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:17.0
     steps:
+      - checkout
       - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
+          name: Build project
+          command: mvn package
+
+  publish-latest:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Publish latest version
+          command: |
+            # Add commands to publish your package
+            echo "Publishing latest version"
 
 workflows:
   version: 2
   build-and-test:
     jobs:
       - test-java
-      # Uncomment the following lines if you want to include the deploy job
-      # - deploy:
-      #     requires:
-      #       - test-java
 
   build-master:
     jobs:
