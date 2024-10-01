@@ -34,13 +34,6 @@ jobs:
   publish-latest:
     docker:
       - image: cimg/openjdk:17.0
-    steps:
-      - checkout
-      - run:
-          name: Publish latest version
-          command: |
-            # Add commands to publish your package
-            echo "Publishing latest version"
 
 workflows:
   version: 2
