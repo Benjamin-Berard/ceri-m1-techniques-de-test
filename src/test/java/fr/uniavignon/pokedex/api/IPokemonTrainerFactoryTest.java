@@ -20,7 +20,7 @@ public class IPokemonTrainerFactoryTest {
 
 
     @Test
-    public void shouldReturnPokemonTrainerWhenCreateTrainer() throws Exception {
+    public void shouldReturnPokemonTrainerWhenCreateTrainer(){
         when(pokemonTrainerFactory.createTrainer("jessie", Team.MYSTIC, pokedexFactory)).thenReturn(mockTrainer);
         assertEquals(mockTrainer, pokemonTrainerFactory.createTrainer("jessie", Team.MYSTIC, pokedexFactory));
     }

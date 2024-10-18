@@ -20,7 +20,7 @@ public class IPokedexFactoryTest {
 
 
     @Test
-    public void shouldReturnIPokedexWhenCreatePokedex() throws Exception {
+    public void shouldReturnIPokedexWhenCreatePokedex(){
         when(pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory)).thenReturn(pokedex);
         assertEquals(pokedex,pokedexFactory.createPokedex(pokemonMetadataProvider,pokemonFactory));
     }
