@@ -24,7 +24,6 @@ jobs:
           paths:
             - ~/.m2/repository
       - codecov/upload:
-          token: ${{ secrets.CODECOV_TOKEN }}
           file: target/site/jacoco/jacoco.xml
 
 
