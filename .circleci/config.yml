@@ -1,5 +1,4 @@
 version: 2.1
-
 orbs:
   codecov: codecov/codecov@4.0.1
 
@@ -24,6 +23,9 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
+      - codecov/upload:
+          file: target/site/jacoco/jacoco.xml
+
 
   build:
     docker:
@@ -44,15 +46,9 @@ jobs:
           command: |
             echo "Publishing latest version"
 
+
 workflows:
   version: 2
-  upload-to-codecov:
-    jobs:
-      - test-java
-      - codecov/upload:
-          requires:
-            - test-java
-
   build-and-test:
     jobs:
       - test-java
