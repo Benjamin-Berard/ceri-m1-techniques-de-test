@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@4.0.1
+
 jobs:
   test-java:
     docker:
@@ -40,15 +43,16 @@ jobs:
           name: Publish latest version
           command: |
             echo "Publishing latest version"
-orbs:
-  codecov: codecov/codecov@4.0.1
 
 workflows:
   version: 2
   upload-to-codecov:
-      jobs:
-        - checkout
-        - codecov/upload
+    jobs:
+      - test-java
+      - codecov/upload:
+          requires:
+            - test-java
+
   build-and-test:
     jobs:
       - test-java
