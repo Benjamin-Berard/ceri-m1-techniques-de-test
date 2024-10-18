@@ -1,4 +1,5 @@
 version: 2.1
+
 orbs:
   codecov: codecov/codecov@4.0.1
 
@@ -9,43 +10,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Calculate cache key
-          command: |-
-            find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
-                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
-      - restore_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
-      - run:
-          command: mvn verify
+          name: Run tests and generate coverage report
+          command: mvn clean test jacoco:report
       - store_test_results:
           path: target/surefire-reports
-      - save_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
-          paths:
-            - ~/.m2/repository
       - codecov/upload:
-          file: target/site/jacoco/jacoco.xml
-
-
-  build:
-    docker:
-      - image: cimg/openjdk:17.0
-    steps:
-      - checkout
-      - run:
-          name: Build project
-          command: mvn package
-
-  publish-latest:
-    docker:
-      - image: cimg/openjdk:17.0
-    steps:
-      - checkout
-      - run:
-          name: Publish latest version
-          command: |
-            echo "Publishing latest version"
-
+          file: target/site/jacoco/jacoco.xml  # fichier de couverture
 
 workflows:
   version: 2
