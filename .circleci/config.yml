@@ -17,6 +17,7 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml  # fichier de couverture
 
+
 workflows:
   version: 2
   build-and-test:
