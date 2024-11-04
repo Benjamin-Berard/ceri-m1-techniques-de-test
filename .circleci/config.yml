@@ -25,7 +25,7 @@ jobs:
             - ~/.m2/repository
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-          slug: corpito/Techniques de test
+
 
 
   build:
