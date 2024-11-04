@@ -29,6 +29,21 @@ L'ensemble des sujets de TPs peut être trouvé dans le dossier `TPs`.
 
 Le dossier `src` contient la définition de l'ensemble des interfaces qui seront l'objet de vos travaux.
 
+## Choix techniques
+
+### Technologies utilisées
+- Java 17
+- Maven 3.0.0-M5
+- JUnit 5.8.2
+- Mockito 4.5.1 pour ajouter une couche d'abstraction
+- JaCoCo 0.8.12 pour la couverture des tests
+- CircleCI 3.2.5 pour l'intégration continue
+
+### Outils de qualité
+- Couverture de tests avec JaCoCo
+- Intégration continue avec CircleCI
+- Suivi de la couverture avec Codecov
+
 ## Rendus
 
 Le rendu des TPs se fait au rythme suivant :
