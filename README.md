@@ -32,7 +32,7 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 ## Choix techniques
 
 ### Technologies utilisées
-- Java 17
+- Java 
 - Maven 3.0.0-M5
 - JUnit 5.8.2
 - Mockito 4.5.1 pour ajouter une couche d'abstraction
