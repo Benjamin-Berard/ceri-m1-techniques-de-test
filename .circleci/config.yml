@@ -13,10 +13,10 @@ jobs:
           command: |-
             find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
                     sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
-
       - restore_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
+          name: Run tests
           command: mvn verify
       - store_test_results:
           path: target/surefire-reports
@@ -24,12 +24,9 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-      #- codecov/upload:
-       #   token: cef5a71b-a066-4750-9b07-a447e399983c
-        #  file: target/site/jacoco/jacoco.xml
-
-
-
+      - codecov/upload:
+          token: $CODECOV_TOKEN
+          file: target/site/jacoco/jacoco.xml
 
   build:
     docker:
@@ -47,22 +44,17 @@ jobs:
       - checkout
       - run:
           name: Publish latest version
-          command: |
-            echo "Publishing latest version"
-
+          command: echo "Publishing latest version"
 
 workflows:
   version: 2
-  upload-to-codecov:
   build-and-test:
     jobs:
-      - checkout
-      - codecov/upload
       - test-java
+      - build
 
   build-master:
     jobs:
-
       - build:
           filters:
             branches:
