@@ -1,5 +1,14 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
+**Berard Benjamin - Groupe 1**
+
+## Badges
+
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master)
+[![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
+
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
