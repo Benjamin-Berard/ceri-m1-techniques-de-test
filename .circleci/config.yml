@@ -13,6 +13,7 @@ jobs:
           command: |-
             find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
                     sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
+
       - restore_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
@@ -23,9 +24,9 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-      - codecov/upload:
-          token: cef5a71b-a066-4750-9b07-a447e399983c
-          file: target/site/jacoco/jacoco.xml
+      #- codecov/upload:
+       #   token: cef5a71b-a066-4750-9b07-a447e399983c
+        #  file: target/site/jacoco/jacoco.xml
 
 
 
@@ -52,12 +53,16 @@ jobs:
 
 workflows:
   version: 2
+  upload-to-codecov:
   build-and-test:
     jobs:
+      - checkout
+      - codecov/upload
       - test-java
 
   build-master:
     jobs:
+
       - build:
           filters:
             branches:
