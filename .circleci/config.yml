@@ -1,70 +1,87 @@
 version: 2.1
+
 orbs:
   codecov: codecov/codecov@4.0.1
 
-jobs:
-  test-java:
-    docker:
-      - image: cimg/openjdk:17.0
+
+commands:
+  setup-java-env:
     steps:
       - checkout
       - run:
           name: Calculate cache key
           command: |-
             find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
-                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
-
+            sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
       - restore_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+          key: maven-deps-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+
+jobs:
+  test-and-coverage:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - setup-java-env
       - run:
+          name: Run tests with coverage
           command: mvn verify
       - store_test_results:
           path: target/surefire-reports
+      - store_artifacts:
+          path: target/site/jacoco
+          destination: jacoco
       - save_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+          key: maven-deps-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
       - codecov/upload:
           token: CODECOV_TOKEN
           file: target/site/jacoco/jacoco.xml
-
-
-
+          flags: unittests
+          fail_ci_if_error: true
 
   build:
     docker:
       - image: cimg/openjdk:17.0
     steps:
-      - checkout
+      - setup-java-env
       - run:
           name: Build project
-          command: mvn package
+          command: mvn package -DskipTests
+      - persist_to_workspace:
+          root: .
+          paths:
+            - target/
 
-  publish-latest:
+  publish:
     docker:
       - image: cimg/openjdk:17.0
     steps:
-      - checkout
+      - setup-java-env
+      - attach_workspace:
+          at: .
       - run:
           name: Publish latest version
           command: |
             echo "Publishing latest version"
-
+            # Ajoutez ici vos commandes de publication
+            # Par exemple pour publier sur Docker Hub ou un registry Maven
 
 workflows:
   version: 2
-  upload-to-codecov:
-  build-and-test:
+  build-test-deploy:
     jobs:
-      - test-java
+      - test-and-coverage:
+          filters:
+            branches:
+              ignore: master
 
-  build-master:
-    jobs:
       - build:
           filters:
             branches:
               only: master
-      - publish-latest:
+
+      - publish:
           requires:
             - build
           filters:
