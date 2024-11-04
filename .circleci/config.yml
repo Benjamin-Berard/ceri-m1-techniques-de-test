@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  codecov: codecov/codecov@4.0.1
+  codecov: codecov/codecov@3.2.5
 
 jobs:
   test-java:
@@ -25,9 +25,10 @@ jobs:
           paths:
             - ~/.m2/repository
       - codecov/upload:
-          token: CODECOV_TOKEN
-          flags: unittest
           file: target/site/jacoco/jacoco.xml
+          flags: unittest
+          token: ${CODECOV_TOKEN}
+
 
   build:
     docker:
