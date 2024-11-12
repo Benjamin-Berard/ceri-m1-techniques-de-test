@@ -22,6 +22,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Test
+          command: mvn test
+      - run:
           name: Upload to Codecov
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "Berard-Benjamin/ceri-m1-techniques-de-test"
 
