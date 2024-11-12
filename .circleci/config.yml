@@ -17,13 +17,13 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: CODECOV_TOKEN
       - run:
           name: Upload Coverage to Codecov
           command: |
-            bash <(curl -s https://codecov.io/bash) -t CODECOV_TOKEN -F java
+            bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -F java
           environment:
-
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 
 
