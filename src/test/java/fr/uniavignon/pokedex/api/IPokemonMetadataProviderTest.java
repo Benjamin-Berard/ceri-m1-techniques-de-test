@@ -23,7 +23,6 @@ public class IPokemonMetadataProviderTest {
     PokemonMetadata pokemonMetadata;
     @BeforeEach
     void setUp() {
-        // Initialiser un PokemonMetadata avec des valeurs de test
         pokemonMetadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
     }
     @Test
@@ -50,10 +49,10 @@ public class IPokemonMetadataProviderTest {
         assertEquals("Bulbizarre", pokemonMetadata.getName());
     }
 
-    /*@Test
+    @Test
     void shouldReturnCorrectAttack() {
         assertEquals(126, pokemonMetadata.getAttack());
-    }*/
+    }
 
     @Test
     void shouldReturnCorrectDefense() {
