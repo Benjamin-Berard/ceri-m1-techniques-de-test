@@ -18,7 +18,11 @@ jobs:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
           token: CODECOV_TOKEN
-
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 
 
