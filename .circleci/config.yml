@@ -30,7 +30,6 @@ jobs:
           flags: unittest
           token: CODECOV_TOKEN
 
-
   build:
     docker:
       - image: cimg/openjdk:17.0
