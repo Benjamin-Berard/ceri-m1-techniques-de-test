@@ -14,12 +14,19 @@ jobs:
           command: mvn clean verify jacoco:report
       - store_test_results:
           path: target/surefire-reports
+
+
+  codecov-upload:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: "Upload Coverage Report to Codecov"
+          command: bash <(curl -s https://codecov.io/bash)
       - codecov/upload:
-          file: target/site/jacoco/jacoco.xml
-          flags: unittest
+          file: ./target/site/jacoco/jacoco.xml
           token: CODECOV_TOKEN
-
-
 
 
   build:
@@ -40,3 +47,6 @@ workflows:
           filters:
             branches:
               only: master
+      - codecov-upload:
+          requires:
+            - test-java
