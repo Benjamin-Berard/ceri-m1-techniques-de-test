@@ -17,6 +17,10 @@ jobs:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
           token: CODECOV_TOKEN
+      - run:
+          name: Upload Coverage to Codecov
+          command: |
+            codecov -t CODECOV_TOKEN -r Benjamin-Berard/ceri-m1-techniques-de-test
 
   build:
     docker:
