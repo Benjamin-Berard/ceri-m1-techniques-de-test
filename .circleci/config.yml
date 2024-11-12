@@ -27,7 +27,6 @@ jobs:
             - ~/.m2/repository
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-          flags: unittest
           token: CODECOV_TOKEN
 
 
