@@ -63,5 +63,4 @@ public class PokemonMetadata {
 	public int getStamina() {
 		return stamina;
 	}
-//TEST POUR VOIR SI LE CODE VA DANS CODECOV
 }

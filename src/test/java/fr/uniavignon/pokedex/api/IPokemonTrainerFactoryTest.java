@@ -16,13 +16,18 @@ public class IPokemonTrainerFactoryTest {
     @Mock
     private IPokemonTrainerFactory pokemonTrainerFactory;
     private IPokedexFactory pokedexFactory;
-    private PokemonTrainer mockTrainer;
+
+    private IPokedex pokedex;
+    private PokemonTrainer mockTrainer = new PokemonTrainer("jessie",Team.MYSTIC,pokedex);
 
 
     @Test
     public void shouldReturnPokemonTrainerWhenCreateTrainer(){
         when(pokemonTrainerFactory.createTrainer("jessie", Team.MYSTIC, pokedexFactory)).thenReturn(mockTrainer);
         assertEquals(mockTrainer, pokemonTrainerFactory.createTrainer("jessie", Team.MYSTIC, pokedexFactory));
+        assertEquals("jessie",mockTrainer.getName());
+        assertEquals(Team.MYSTIC,mockTrainer.getTeam());
+        assertEquals(pokedex,mockTrainer.getPokedex());
     }
 
 }
