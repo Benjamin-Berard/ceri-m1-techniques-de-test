@@ -48,7 +48,7 @@ workflows:
               only: master
       - codecov-upload:
           requires:
-            - test
+            - test-java
 
 
 
