@@ -22,12 +22,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Upload Coverage Report to Codecov"
-          command: bash <(curl -s https://codecov.io/bash)
-      - codecov/upload:
-          file: ./target/site/jacoco/jacoco.xml
-          token: CODECOV_TOKEN
-
+          name: Upload to Codecov
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "Berard-Benjamin/ceri-m1-techniques-de-test"
 
   build:
     docker:
@@ -47,6 +43,4 @@ workflows:
           filters:
             branches:
               only: master
-      - codecov-upload:
-          requires:
-            - test-java
+
