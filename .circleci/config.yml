@@ -28,6 +28,7 @@ jobs:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
           token: CODECOV_TOKEN
+          slug: "https://github.com/Benjamin-Berard/ceri-m1-techniques-de-test.git"
 
 
   build:
