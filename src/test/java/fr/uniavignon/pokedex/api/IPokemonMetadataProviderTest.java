@@ -23,6 +23,7 @@ public class IPokemonMetadataProviderTest {
 
     @Test
     void shouldReturnPokemonMetadataWhenGetPokemonMetadata() throws PokedexException {
+        when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
         assertEquals(pokemonMetadata,pokemonMetadataProvider.getPokemonMetadata(0));
         verify(pokemonMetadataProvider).getPokemonMetadata(0);
     }
