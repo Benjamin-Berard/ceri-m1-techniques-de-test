@@ -14,7 +14,6 @@ jobs:
           command: mvn clean verify jacoco:report
       - store_test_results:
           path: target/surefire-reports
-          destinatin: jacoco
 
   codecov-upload:
     docker:
