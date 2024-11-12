@@ -17,7 +17,7 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
-          token: $CODECOV_TOKEN
+          token: cef5a71b-a066-4750-9b07-a447e399983c
 
 
 
