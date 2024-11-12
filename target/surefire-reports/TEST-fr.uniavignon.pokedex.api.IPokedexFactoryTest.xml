@@ -1,58 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.uniavignon.pokedex.api.IPokedexFactoryTest" time="0.012" tests="1" errors="0" skipped="0" failures="0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="0" failures="0" name="fr.uniavignon.pokedex.api.IPokedexFactoryTest" time="0" errors="0" skipped="0">
   <properties>
-    <property name="java.specification.version" value="21"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/test-classes:/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/classes:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/mockito/mockito-junit-jupiter/4.5.1/mockito-junit-jupiter-4.5.1.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/mockito/mockito-core/4.5.1/mockito-core-4.5.1.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/net/bytebuddy/byte-buddy/1.12.9/byte-buddy-1.12.9.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.9/byte-buddy-agent-1.12.9.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="idea.version" value="2022.3.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.1+12-29"/>
+    <property name="sun.boot.library.path" value="C:\Users\Principal\.jdks\openjdk-21.0.1\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Principal\Desktop\ceri-m1-techniques-de-test"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="os.name" value="Linux"/>
-    <property name="java.vm.specification.version" value="21"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
     <property name="user.country" value="FR"/>
-    <property name="sun.boot.library.path" value="/home/nas-wks01/users/uapv2307875/.jdks/openjdk-21/lib"/>
-    <property name="sun.java.command" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/surefire/surefirebooter793658033921643388.jar /home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/surefire 2024-10-18T15-45-16_917-jvmRun1 surefire2656787030480139737tmp surefire_0902574240966401225tmp"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Principal\Desktop\ceri-m1-techniques-de-test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="21.0.1+12-29"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\PRINCI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Users\Principal\.jdks\openjdk-21.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Users\Principal\AppData\Local\Programs\Common\msedgedriver;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\app\Principal\product\18.0.0\dbhomeXE\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Android;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-17\bin;C:\Users\Principal\AppData\Local\ActiveState\StateTool\release\bin;C:\Users\Principal\AppData\Local\activestate\cache\bin;C:\Users\Principal\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Principal\AppData\Local\Programs\Python\Python39\;C:\Users\Principal\AppData\Local\Microsoft\WindowsApps;C:\Users\Principal\AppData\Local\GitHubDesktop\bin;C:\Users\Principal\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\ucrt64\bin;C:\SFML-2.6.1\bin;C:\cmake-3.31.0-rc3-windows-x86_64\bin;;."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven3/conf"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/test-classes:/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/classes:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/mockito/mockito-junit-jupiter/4.5.1/mockito-junit-jupiter-4.5.1.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/mockito/mockito-core/4.5.1/mockito-core-4.5.1.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/net/bytebuddy/byte-buddy/1.12.9/byte-buddy-1.12.9.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.9/byte-buddy-agent-1.12.9.jar:/home/nas-wks01/users/uapv2307875/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/nas-wks01/users/uapv2307875"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Principal"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="Principal"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.3.3 test"/>
+    <property name="java.home" value="C:\Users\Principal\.jdks\openjdk-21.0.1"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2023-09-19"/>
-    <property name="java.home" value="/home/nas-wks01/users/uapv2307875/.jdks/openjdk-21"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2/target/surefire/surefirebooter793658033921643388.jar"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21+35-2513"/>
-    <property name="user.name" value="uapv2307875"/>
-    <property name="stdout.encoding" value="UTF-8"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="6.8.0-41-generic"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/nas-wks01/users/uapv2307875/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="idea.version" value="2024.2.1"/>
-    <property name="java.version" value="21"/>
-    <property name="user.dir" value="/home/nas-wks01/users/uapv2307875/IdeaProjects/ceri-m1-techniques-de-testV2"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="native.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="21+35-2513"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="shouldReturnIPokedexWhenCreatePokedex" classname="fr.uniavignon.pokedex.api.IPokedexFactoryTest" time="0.01"/>
 </testsuite>
