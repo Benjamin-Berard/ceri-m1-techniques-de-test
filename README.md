@@ -5,7 +5,8 @@
 ## Badges
 
 
-[![CircleCI](https://undefined/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master.svg?style=svg)](https://undefined/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master)[![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
+(https://Benjamin-Berard/ceri-m1-techniques-de-test/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master.svg?style=svg)](https://Benjamin-Berard/ceri-m1-techniques-de-test/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master) 
+[![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
 
 
 ## Introduction
