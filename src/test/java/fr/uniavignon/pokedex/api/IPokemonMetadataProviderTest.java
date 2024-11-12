@@ -18,12 +18,11 @@ public class IPokemonMetadataProviderTest {
     @Mock
     IPokemonMetadataProvider pokemonMetadataProvider;
 
+    @Mock
     PokemonMetadata pokemonMetadata;
-
 
     @Test
     void shouldReturnPokemonMetadataWhenGetPokemonMetadata() throws PokedexException {
-        when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
         assertEquals(pokemonMetadata,pokemonMetadataProvider.getPokemonMetadata(0));
         verify(pokemonMetadataProvider).getPokemonMetadata(0);
     }
@@ -35,5 +34,18 @@ public class IPokemonMetadataProviderTest {
         verify(pokemonMetadataProvider).getPokemonMetadata(152);
 
     }
+
+    @Test
+    void shouldReturnIntWhengetIndex() throws PokedexException{
+
+        when(pokemonMetadata.getIndex()).thenReturn(0);
+        when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(pokemonMetadata);
+        assertEquals(0, pokemonMetadataProvider.getPokemonMetadata(0).getIndex());
+        verify(pokemonMetadataProvider).getPokemonMetadata(0);
+
+    }
+
+
+
 
 }
