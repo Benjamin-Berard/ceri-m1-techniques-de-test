@@ -1,7 +1,8 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@4.0.1
-
+variables:
+  CODECOV_TOKEN=cef5a71b-a066-4750-9b07-a447e399983c
 jobs:
   test-java:
     docker:
@@ -17,8 +18,8 @@ jobs:
           file: target/site/jacoco/jacoco.xml
           flags: unittest
           token: $CODECOV_TOKEN
-          env:
-            CODECOV_TOKEN=cef5a71b-a066-4750-9b07-a447e399983c
+
+
 
 
 
