@@ -9,12 +9,6 @@ jobs:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          verbose: true
-        env:
-          CODECOV_TOKEN: CODECOV_TOKEN
       - run:
           name: Run tests
           command: mvn clean verify jacoco:report
