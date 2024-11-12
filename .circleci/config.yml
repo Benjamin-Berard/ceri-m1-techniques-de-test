@@ -15,9 +15,6 @@ jobs:
       - store_test_results:
           path: target/surefire-reports
           destinatin: jacoco
-      - codecov/upload:
-          file: target/site/jacoco/jacoco.xml
-          flags: unittests
 
   codecov-upload:
     docker:
