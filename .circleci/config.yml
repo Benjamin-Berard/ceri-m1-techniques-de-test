@@ -41,9 +41,6 @@ workflows:
   build-and-test:
     jobs:
       - test-java
-      - upload-to-codecov:
-          requires:
-            - maven/test
       - build:
           filters:
             branches:
