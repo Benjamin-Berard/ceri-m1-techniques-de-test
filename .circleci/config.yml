@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  codecov: codecov/codecov@3.2.5
+  codecov: codecov/codecov@4.0.1
 variables:
   CODECOV_TOKEN=cef5a71b-a066-4750-9b07-a447e399983c
 jobs:
