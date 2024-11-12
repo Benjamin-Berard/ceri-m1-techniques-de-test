@@ -4,8 +4,7 @@
 
 ## Badges
 
-
-(https://Benjamin-Berard/ceri-m1-techniques-de-test/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master.svg?style=svg)](https://Benjamin-Berard/ceri-m1-techniques-de-test/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master) 
+[![corpito](https://circleci.com/gh/corpito/Techniques de test/tree/master.svg?style=svg)](https://circleci.com/gh/circleci/Techniques de test/?branch=master)
 [![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
 
 
