@@ -25,7 +25,7 @@ jobs:
           command: mvn test
       - run:
           name: Upload to Codecov
-          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco/jacoco.xml -r Benjamin-Berard/ceri-m1-techniques-de-test -v
+          command: bash <(curl -s https://codecov.io/bash) -t 258491b2-7530-40f3-96b6-1f27403299a7 -s target/site/jacoco/jacoco.xml -r Benjamin-Berard/ceri-m1-techniques-de-test -v
 
   build:
     docker:
