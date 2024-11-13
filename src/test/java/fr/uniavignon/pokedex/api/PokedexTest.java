@@ -69,4 +69,19 @@ public class PokedexTest {
     void shouldReturnBulbizarreInstance() throws PokedexException {
     assertEquals(pokemon.getName(), pokedex.getPokemonMetadata(0).getName());
 }
+
+@Test
+    void allComparedList(){
+    pokedex.addPokemon(pokemon);
+    pokedex.addPokemon(pokemon2);
+    List<Pokemon> compared = pokedex.getPokemons(PokemonComparators.NAME);
+    assertEquals("Aquali",compared.get(0).getName());
+    compared = pokedex.getPokemons(PokemonComparators.CP);
+    assertEquals("Aquali",compared.get(1).getName());
+    compared = pokedex.getPokemons(PokemonComparators.INDEX);
+    assertEquals("Bulbizarre",compared.get(0).getName());
+
+
+
+}
 }
