@@ -78,7 +78,12 @@ public class IPokemonMetadataProviderTest {
 
     @Test
     void shouldReturnPokemonMetadataList(){
-        assertEquals(4,PokemonMetadataProvider.getPokemonMetadata().size());
+        assertEquals("Bulbizarre",PokemonMetadataProvider.getPokemonMetadata().get(0).getName());
+    }
+    @Test
+    void shouldReturnPokedexException(){
+        assertThrows(PokedexException.class,()-> pokemonMetadataProvider1.getPokemonMetadata(150));
+
     }
 
     @Test
