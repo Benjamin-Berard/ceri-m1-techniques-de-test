@@ -80,8 +80,6 @@ public class PokedexTest {
     assertEquals("Aquali",compared.get(1).getName());
     compared = pokedex.getPokemons(PokemonComparators.INDEX);
     assertEquals("Bulbizarre",compared.get(0).getName());
-
-
-
 }
+
 }
