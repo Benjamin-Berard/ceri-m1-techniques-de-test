@@ -33,6 +33,12 @@ public class PokedexTest {
     pokedex.addPokemon(pokemon);
     assertEquals(pokemon,pokedex.getPokemon(0));
 }
+@Test
+    void shouldReturnAquali() throws PokedexException {
+    pokedex.addPokemon(pokemon);
+    pokedex.addPokemon(pokemon2);
+    assertEquals(pokemon2.getName(),pokedex.getPokemon(133).getName());
+}
 
 @Test
     void shouldReturnPokedexException(){
