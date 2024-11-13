@@ -81,5 +81,4 @@ public class PokedexTest {
     compared = pokedex.getPokemons(PokemonComparators.INDEX);
     assertEquals("Bulbizarre",compared.get(0).getName());
 }
-
 }
