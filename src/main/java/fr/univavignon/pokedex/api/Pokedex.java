@@ -30,7 +30,7 @@ public class Pokedex implements IPokedex{
         for(Pokemon p : pokemons){
             if(p.getIndex()==id) return p;
         }
-        return null;
+        throw new PokedexException("no pokemon found");
     }
 
     @Override

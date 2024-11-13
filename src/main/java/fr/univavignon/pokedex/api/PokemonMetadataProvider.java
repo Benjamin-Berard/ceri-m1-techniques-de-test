@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
-    static List<PokemonMetadata> pokemonMetadata ;
-
+    static List<PokemonMetadata> pokemonMetadata = new ArrayList<>();
+    PokemonMetadata pokemondata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
+    public PokemonMetadataProvider(){
+        pokemonMetadata.add(pokemondata);
+    }
 
 
     @Override
@@ -18,6 +21,11 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
 
     public static void setPokemonMetadata(List<PokemonMetadata> pokemonMetadata) {
         PokemonMetadataProvider.pokemonMetadata = pokemonMetadata;
+    }
+
+    public static void addPokemonMetadata(int index){
+        //Pour les tests
+        pokemonMetadata.add(new PokemonMetadata(index,"salameche",130,130,200));
     }
 
     public static List<PokemonMetadata> getPokemonMetadata() {
