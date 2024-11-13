@@ -78,7 +78,7 @@ public class IPokemonMetadataProviderTest {
 
     @Test
     void shouldReturnPokemonMetadataList(){
-        assertEquals(1,PokemonMetadataProvider.getPokemonMetadata().size());
+        assertEquals(4,PokemonMetadataProvider.getPokemonMetadata().size());
     }
 
     @Test
