@@ -89,9 +89,9 @@ jobs:
           name: Build docs
           command: cd docs/ && make html
       - persist_to_workspace:
-          root: .
-          paths:
-              - docs/_build/html
+
+          root: docs/_build
+          paths: html
 
 workflows:
   version: 2
