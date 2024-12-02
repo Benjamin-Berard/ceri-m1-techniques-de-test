@@ -96,9 +96,7 @@ workflows:
       - test-java
       - checkstyle
       - docs-build
-      - docs-deploy:
-          requires:
-            docs-build
+      - docs-deploy
       - build:
           filters:
             branches:
