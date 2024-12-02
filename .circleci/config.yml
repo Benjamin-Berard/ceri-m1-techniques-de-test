@@ -1,8 +1,7 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@4.0.1
-variables:
-  CODECOV_TOKEN=cef5a71b-a066-4750-9b07-a447e399983c
+
 jobs:
   test-java:
     docker:
@@ -21,21 +20,21 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Test
+          name: Run tests
           command: mvn test
       - run:
           name: Upload to Codecov
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco.xml -r Benjamin-Berard/ceri-m1-techniques-de-test -v
 
   checkstyle:
+    docker:
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
-          name: Checkstyle Test
-          command:  mvn test
-      - run:
           name: Run Checkstyle
           command: mvn checkstyle:check
+
   build:
     docker:
       - image: cimg/openjdk:17.0
@@ -51,7 +50,6 @@ workflows:
     jobs:
       - test-java
       - checkstyle
-
       - build:
           filters:
             branches:
@@ -59,6 +57,3 @@ workflows:
       - codecov-upload:
           requires:
             - test-java
-
-
-
