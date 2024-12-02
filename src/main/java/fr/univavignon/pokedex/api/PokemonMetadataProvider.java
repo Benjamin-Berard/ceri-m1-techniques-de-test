@@ -3,10 +3,10 @@ package fr.univavignon.pokedex.api;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
+public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
     static List<PokemonMetadata> pokemonMetadata = new ArrayList<>();
     PokemonMetadata pokemondata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
-    public PokemonMetadataProvider(){
+    public PokemonMetadataProvider() {
         pokemonMetadata.add(pokemondata);
     }
 
@@ -14,7 +14,7 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
 
-        if(index > pokemonMetadata.size()-1) throw new PokedexException("invalid id");
+        if (index > pokemonMetadata.size() - 1) throw new PokedexException("invalid id");
         return pokemonMetadata.get(index);
 
     }
@@ -23,7 +23,7 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
         PokemonMetadataProvider.pokemonMetadata = pokemonMetadata;
     }
 
-    public static void addPokemonMetadata(int index){
+    public static void addPokemonMetadata(int index) {
         //Pour les tests
         pokemonMetadata.add(new PokemonMetadata(index,"salameche",130,130,200));
     }

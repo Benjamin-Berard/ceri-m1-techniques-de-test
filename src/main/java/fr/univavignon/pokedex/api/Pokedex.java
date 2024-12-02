@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Pokedex implements IPokedex{
+public class Pokedex implements IPokedex {
 
     public Pokedex(PokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {
         this.pokemonFactory =  pokemonFactory;
@@ -22,13 +22,13 @@ public class Pokedex implements IPokedex{
     @Override
     public int addPokemon(Pokemon pokemon) {
         pokemons.add(pokemon);
-        return pokemons.size()-1;
+        return pokemons.size() - 1;
     }
 
     @Override
     public Pokemon getPokemon(int id) throws PokedexException {
-        for(Pokemon p : pokemons){
-            if(p.getIndex()==id) return p;
+        for (Pokemon p : pokemons) {
+            if (p.getIndex() == id) return p;
         }
         throw new PokedexException("no pokemon found");
     }
