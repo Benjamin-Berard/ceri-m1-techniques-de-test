@@ -26,20 +26,21 @@ jobs:
           name: Upload to Codecov
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco.xml -r Benjamin-Berard/ceri-m1-techniques-de-test -v
 
-checkstyle:
-  docker:
-    - image: cimg/openjdk:17.0
-  steps:
-    - checkout
-    - run:
-        name: Run Checkstyle
-        command: mvn checkstyle:check
-    - run:
-        name: Generate Checkstyle Report
-        command: mvn checkstyle:checkstyle
-    - store_artifacts:
-        path: target/checkstyle-result.xml
-        destination: checkstyle-report
+  checkstyle:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Run Checkstyle
+          command: mvn checkstyle:check
+      - run:
+          name: Generate Checkstyle Report
+          command: mvn checkstyle:checkstyle
+      - store_artifacts:
+          path: target/checkstyle-result.xml
+          destination: checkstyle-report
+
 
   build:
     docker:
