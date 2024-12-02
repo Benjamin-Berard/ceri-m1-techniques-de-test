@@ -72,9 +72,10 @@ jobs:
   docs-build:
     docker:
       - image: cimg/openjdk:17.0
+        user: root
     steps:
       - checkout
-      - run:
+        - run:
             name: Install pip
             command: |
               apt-get update && apt-get install -y python3 python3-pip
