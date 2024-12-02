@@ -69,6 +69,7 @@ jobs:
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/build/html
+
   docs-build:
     docker:
       - image: cimg/openjdk:17.0
@@ -100,7 +101,9 @@ workflows:
       - test-java
       - checkstyle
       - docs-build
-      - docs-deploy
+      - docs-deploy:
+          requires:
+            - docs-build
       - build:
           filters:
             branches:
