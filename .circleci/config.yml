@@ -75,9 +75,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Installer Sphinx
-          command: |
-            pip install sphinx
+          name: Install dependencies
+          command: pip install -r requirements.txt
       - run:
           name: Build docs
           command: cd docs/ && make html
