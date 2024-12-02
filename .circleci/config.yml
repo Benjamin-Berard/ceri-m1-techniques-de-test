@@ -50,7 +50,28 @@ jobs:
       - run:
           name: Build project
           command: mvn package
-
+  docs-deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs/_build
+      - run:
+          name: Disable jekyll builds
+          command: touch docs/_build/html/.nojekyll
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "benjaminb4@outlook.fr"
+            git config user.name "Benjamin-Berard"
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:KzUTLEKjx1GwTyqHHAewBQi/WPZdFG/SV+2Ci+8R+Y0"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/_build/html
 workflows:
   version: 2
   build-and-test:
