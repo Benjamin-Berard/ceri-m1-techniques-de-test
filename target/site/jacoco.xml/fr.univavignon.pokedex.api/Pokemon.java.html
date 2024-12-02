@@ -8,19 +8,19 @@
 public final class Pokemon extends PokemonMetadata {
 
 	/** Combat Point of the pokemon. **/
-	private final int cp;
+    private final int cp;
 
 	/** HP of the pokemon. **/
-	private final int hp;
+    private final int hp;
 
 	/** Required dust for upgrading this pokemon. **/
-	private final int dust;
+    private final int dust;
 
 	/** Required candy for upgrading this pokemon. **/
-	private final int candy;
+    private final int candy;
 
 	/** IV perfection percentage. **/
-	private final double iv;
+    private final double iv;
 	
 	/**
 	 * Default constructor.
@@ -36,7 +36,7 @@ public final class Pokemon extends PokemonMetadata {
 	 * @param candy Required candy for upgrading this pokemon.
 	 * @param iv IV perfection percentage.
 	 */
-	public Pokemon(
+    public Pokemon(
 			final int index,
 			final String name,
 			final int attack,
@@ -48,37 +48,37 @@ public final class Pokemon extends PokemonMetadata {
 			final int candy,
 			final double iv) {
 <span class="fc" id="L50">		super(index, name, attack, defense, stamina);</span>
-<span class="fc" id="L51">		this.cp = cp;</span>
-<span class="fc" id="L52">		this.hp = hp;</span>
-<span class="fc" id="L53">		this.dust = dust;</span>
-<span class="fc" id="L54">		this.candy = candy;</span>
-<span class="fc" id="L55">		this.iv = iv;</span>
-<span class="fc" id="L56">	}</span>
+<span class="fc" id="L51">        this.cp = cp;</span>
+<span class="fc" id="L52">        this.hp = hp;</span>
+<span class="fc" id="L53">        this.dust = dust;</span>
+<span class="fc" id="L54">        this.candy = candy;</span>
+<span class="fc" id="L55">        this.iv = iv;</span>
+<span class="fc" id="L56">    }</span>
 
 	/** Combat Point getter getter. **/
-	public int getCp() {
-<span class="fc" id="L60">		return cp;</span>
-	}
+    public int getCp() {
+<span class="fc" id="L60">        return cp;</span>
+    }
 	
 	/** HP getter. **/
-	public int getHp() {
-<span class="fc" id="L65">		return hp;</span>
-	}
+    public int getHp() {
+<span class="fc" id="L65">        return hp;</span>
+    }
 
 	/** Dust getter. **/
-	public int getDust() {
-<span class="fc" id="L70">		return dust;</span>
-	}
+    public int getDust() {
+<span class="fc" id="L70">        return dust;</span>
+    }
 
 	/** Candy getter. **/
-	public int getCandy() {
-<span class="fc" id="L75">		return candy;</span>
-	}
+    public int getCandy() {
+<span class="fc" id="L75">        return candy;</span>
+    }
 	
 	/** IV getter. **/
-	public double getIv() {
-<span class="fc" id="L80">		return iv;</span>
-	}
+    public double getIv() {
+<span class="fc" id="L80">        return iv;</span>
+    }
 	
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

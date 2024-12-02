@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Pokedex implements IPokedex{
+public class Pokedex implements IPokedex {
 
 <span class="fc" id="L9">    public Pokedex(PokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {</span>
 <span class="fc" id="L10">        this.pokemonFactory =  pokemonFactory;</span>
@@ -22,14 +22,14 @@ public class Pokedex implements IPokedex{
     @Override
     public int addPokemon(Pokemon pokemon) {
 <span class="fc" id="L24">        pokemons.add(pokemon);</span>
-<span class="fc" id="L25">        return pokemons.size()-1;</span>
+<span class="fc" id="L25">        return pokemons.size() - 1;</span>
     }
 
     @Override
     public Pokemon getPokemon(int id) throws PokedexException {
-<span class="fc bfc" id="L30" title="All 2 branches covered.">        for(Pokemon p : pokemons){</span>
-<span class="pc bpc" id="L31" title="1 of 2 branches missed.">            if(p.getIndex()==id) return p;</span>
-<span class="nc" id="L32">        }</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (Pokemon p : pokemons) {</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            if (p.getIndex() == id) return p;</span>
+<span class="fc" id="L32">        }</span>
 <span class="fc" id="L33">        throw new PokedexException(&quot;no pokemon found&quot;);</span>
     }
 

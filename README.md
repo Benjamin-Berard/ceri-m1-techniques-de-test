@@ -6,7 +6,7 @@
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master)
 [![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
-![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-green)
+![Checkstyle](target/site/badges/checkstyle-result.svg)
 
 
 ## Introduction

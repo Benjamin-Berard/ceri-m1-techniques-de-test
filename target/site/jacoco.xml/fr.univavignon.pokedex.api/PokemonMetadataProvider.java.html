@@ -3,10 +3,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
+public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
 <span class="fc" id="L7">    static List&lt;PokemonMetadata&gt; pokemonMetadata = new ArrayList&lt;&gt;();</span>
 <span class="fc" id="L8">    PokemonMetadata pokemondata = new PokemonMetadata(0,&quot;Bulbizarre&quot;,126,126,90);</span>
-<span class="fc" id="L9">    public PokemonMetadataProvider(){</span>
+<span class="fc" id="L9">    public PokemonMetadataProvider() {</span>
 <span class="fc" id="L10">        pokemonMetadata.add(pokemondata);</span>
 <span class="fc" id="L11">    }</span>
 
@@ -14,22 +14,22 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider{
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
 
-<span class="pc bpc" id="L17" title="1 of 2 branches missed.">        if(pokemonMetadata.get(index)==null) throw new PokedexException(&quot;invalid id&quot;);</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (index &gt; pokemonMetadata.size() - 1) throw new PokedexException(&quot;invalid id&quot;);</span>
 <span class="fc" id="L18">        return pokemonMetadata.get(index);</span>
 
     }
 
     public static void setPokemonMetadata(List&lt;PokemonMetadata&gt; pokemonMetadata) {
-<span class="nc" id="L23">        PokemonMetadataProvider.pokemonMetadata = pokemonMetadata;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L23">        PokemonMetadataProvider.pokemonMetadata = pokemonMetadata;</span>
+<span class="fc" id="L24">    }</span>
 
-    public static void addPokemonMetadata(int index){
+    public static void addPokemonMetadata(int index) {
         //Pour les tests
 <span class="fc" id="L28">        pokemonMetadata.add(new PokemonMetadata(index,&quot;salameche&quot;,130,130,200));</span>
 <span class="fc" id="L29">    }</span>
 
     public static List&lt;PokemonMetadata&gt; getPokemonMetadata() {
-<span class="nc" id="L32">        return pokemonMetadata;</span>
+<span class="fc" id="L32">        return pokemonMetadata;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

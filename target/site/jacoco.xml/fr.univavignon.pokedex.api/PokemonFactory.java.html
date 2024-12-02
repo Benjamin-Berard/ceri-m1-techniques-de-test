@@ -2,13 +2,13 @@
 
 import java.util.Random;
 
-<span class="fc" id="L5">public class PokemonFactory implements IPokemonFactory{</span>
-<span class="fc" id="L6">    PokemonMetadataProvider pokemonMetadataProvider= new PokemonMetadataProvider();</span>
+<span class="fc" id="L5">public class PokemonFactory implements IPokemonFactory {</span>
+<span class="fc" id="L6">    PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();</span>
 
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
 <span class="fc" id="L10">        PokemonMetadataProvider.addPokemonMetadata(5);</span>
-<span class="fc" id="L11">        PokemonMetadata p = PokemonMetadataProvider.pokemonMetadata.get(PokemonMetadataProvider.pokemonMetadata.size()-1);</span>
+<span class="fc" id="L11">        PokemonMetadata p = PokemonMetadataProvider.pokemonMetadata.get(PokemonMetadataProvider.pokemonMetadata.size() - 1);</span>
 <span class="fc" id="L12">        Random random = new Random();</span>
 <span class="fc" id="L13">        int iv = random.nextInt(101);</span>
 <span class="fc" id="L14">        return new Pokemon(index,p.getName(),p.getAttack(),p.getDefense(),p.getStamina(),cp,hp,dust,candy,iv);</span>
