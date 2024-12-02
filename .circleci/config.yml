@@ -75,10 +75,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Vérifier le répertoire actuel et lister les fichiers
+          name: Installer Sphinx
           command: |
-            echo %CD%
-            dir
+            pip install sphinx
       - run:
           name: Build docs
           command: cd docs/ && make html
