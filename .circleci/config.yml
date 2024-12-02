@@ -71,7 +71,7 @@ jobs:
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/_build/html
   docs-build:
     docker:
-      - image: python:3.7
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
