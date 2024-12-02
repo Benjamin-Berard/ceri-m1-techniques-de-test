@@ -75,8 +75,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Vérifier le répertoire actuel et lister les fichiers
+          command: |
+            echo %CD%
+            dir
+      - run:
           name: Build docs
-          command: cd ../docs/ && make html
+          command: cd docs/ && make html
       - persist_to_workspace:
           root: docs/_build
           paths: html
