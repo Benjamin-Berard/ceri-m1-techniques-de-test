@@ -60,12 +60,6 @@ jobs:
       - attach_workspace:
           at: docs/
       - run:
-          name: Build project
-          command: mvn package
-      - run:
-          name: "Generate doc test"
-          command: mvn clean site
-      - run:
           name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages@2.0.1
