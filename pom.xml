@@ -99,12 +99,13 @@
                 <version>3.11.2</version>
                 <executions>
                     <execution>
-                        <phase>test</phase>
+                        <id>generate-javadoc</id>
+                        <phase>site</phase>
                         <goals>
-                            <goal>test-javadoc</goal>
+                            <goal>javadoc</goal>
                         </goals>
                         <configuration>
-                            <outputDir>docs/</outputDir>
+                            <outputDirectory>${project.build.directory}/site/apidocs</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
