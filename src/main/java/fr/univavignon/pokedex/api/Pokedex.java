@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Pokedex implements IPokedex {
     /**
-     * Constructor for the Pokedex class
+     * Constructor for the Pokedex CLASS
      * @param pokemonFactory to initiate pokemonFactory
      * @param pokemonMetadataProvider to initiate pokemonMetadataProvider
      */
