@@ -79,6 +79,10 @@ jobs:
       - run:
           name: "Generate Doc"
           command:  mvn javadoc:javadoc
+      - persist_to_workspace:
+          root: .
+          paths:
+            - docs/
 
 workflows:
   version: 2

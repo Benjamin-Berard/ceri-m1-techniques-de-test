@@ -34,7 +34,7 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
 
     /**
      * set metadata of the pokemons
-     * @param pokemonMetadata
+     * @param pokemonMetadata to set our metadata based on this param
      */
     public static void setPokemonMetadata(List<PokemonMetadata> pokemonMetadata) {
         PokemonMetadataProvider.pokemonMetadata = pokemonMetadata;
@@ -42,7 +42,7 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
 
     /**
      * add new metadata to the list
-     * @param index
+     * @param index which is the index of the pokemon in the metadatalist
      */
     public static void addPokemonMetadata(int index) {
         //Pour les tests
