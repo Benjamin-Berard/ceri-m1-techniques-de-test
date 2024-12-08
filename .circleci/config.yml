@@ -79,7 +79,7 @@ jobs:
       - checkout
       - run:
           name: "Generate Doc"
-          command: mvn site
+          command: mvn clean site
       - persist_to_workspace:
           root: target/site
           paths:
