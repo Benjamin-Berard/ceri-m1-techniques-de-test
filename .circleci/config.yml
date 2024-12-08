@@ -77,8 +77,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Generate Doc"
-        command:  mvn -B javadoc::javadoc
+          name: "Generate Doc"
+          command:  mvn -B javadoc::javadoc
 
 workflows:
   version: 2
