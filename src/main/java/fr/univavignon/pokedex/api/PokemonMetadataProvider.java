@@ -21,8 +21,8 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
     /**
      * override the IPokemonMetadataProvider getPokemonMetadata fonction
      * @param index Index of the pokemon to retrieve metadata for.
-     * @return
-     * @throws PokedexException
+     * @return the metadata of the pokemon
+     * @throws PokedexException when id is invalid
      */
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {

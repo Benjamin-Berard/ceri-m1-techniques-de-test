@@ -4,8 +4,15 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Class that implements IPokedex
+ */
 public class Pokedex implements IPokedex {
-
+    /**
+     * Constructor for the pokedex class
+     * @param pokemonFactory to initiate pokemonFactory
+     * @param pokemonMetadataProvider to initiate pokemonMetadataProvider
+     */
     public Pokedex(PokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {
         this.pokemonFactory =  pokemonFactory;
         this.pokemonMetadataProvider = pokemonMetadataProvider;
