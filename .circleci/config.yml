@@ -57,15 +57,8 @@ jobs:
       - image: node:8.10.0
     steps:
       - checkout
-      - run:
-          name: Install Maven
-          command: |
-            apt-get update && apt-get install -y maven
-      - run:
-          name: "Generate Doc"
-          command: mvn site
       - attach_workspace:
-          at: docs/
+          at: target/site
       - run:
           name: Install and configure dependencies
           command: |
@@ -79,7 +72,18 @@ jobs:
           name: Deploy docs to gh-pages branch
           command: gh-pages --message "[skip ci] Updates" -d target/site/apidocs
 
-
+  docs-build:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: "Generate Doc"
+          command: mvn site
+      - persist_to_workspace:
+          root: target/site
+          paths:
+            - apidocs
 
 
 
@@ -90,7 +94,10 @@ workflows:
     jobs:
       - test-java
       - checkstyle
-      - docs-deploy
+      - docs-build
+      - docs-deploy:
+          requires:
+            - docs-build
       - build:
           filters:
             branches:
