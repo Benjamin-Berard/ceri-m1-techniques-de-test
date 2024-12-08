@@ -69,7 +69,7 @@ jobs:
             - "SHA256:KzUTLEKjx1GwTyqHHAewBQi/WPZdFG/SV+2Ci+8R+Y0"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --message "[skip ci] Updates" --dist docs/
+          command: gh-pages --message "[skip ci] Updates" -d dist docs/
 
   docs-build:
     docker:
