@@ -50,6 +50,7 @@ jobs:
       - run:
           name: Build project
           command: mvn package
+
   docs-deploy:
     docker:
       - image: node:8.10.0

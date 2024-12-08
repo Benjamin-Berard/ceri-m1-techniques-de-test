@@ -93,27 +93,22 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.3</version>
+                <version>3.11.2</version>
                 <executions>
                     <execution>
                         <phase>test</phase>
-                        <configuration>
-                            <reportOutputDirectory>docs</reportOutputDirectory>
-                        </configuration>
                         <goals>
-                            <goal>test-javadoc</goal>
+                            <goal>apidoc</goal>
                         </goals>
+                        <configuration>
+                            <outputDir>docs/</outputDir>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <doclint>none</doclint>
-                </configuration>
             </plugin>
-
         </plugins>
     </build>
 
