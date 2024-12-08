@@ -60,6 +60,9 @@ jobs:
       - attach_workspace:
           at: docs/
       - run:
+          name: Build project
+          command: mvn package
+      - run:
           name: "Generate doc test"
           command: mvn clean site
       - run:
