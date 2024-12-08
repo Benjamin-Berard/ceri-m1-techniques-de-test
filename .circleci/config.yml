@@ -56,7 +56,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: docs/build
+          at: docs/
       - run:
           name: Install and configure dependencies
           command: |
@@ -68,7 +68,7 @@ jobs:
             - "SHA256:KzUTLEKjx1GwTyqHHAewBQi/WPZdFG/SV+2Ci+8R+Y0"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --message "[skip ci] Updates" --dist docs/build/
+          command: gh-pages --message "[skip ci] Updates" --dist docs/
 
   docs-build:
     docker:
