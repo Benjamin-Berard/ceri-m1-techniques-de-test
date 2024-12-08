@@ -39,27 +39,37 @@ public class PokemonMetadata {
         this.stamina = stamina;
     }
 	
-	/** Index getter. **/
+	/** Index getter.
+     * @return index of the pokemon
+     **/
     public int getIndex() {
         return index;
     }
 	
-	/** Name getter.**/
+	/** Name getter.
+     * @return name of the pokemon
+     **/
     public String getName() {
         return name;
     }
 
-	/** Attack level getter. **/
+	/** Attack level getter.
+     * @return attack of the pokemon
+     **/
     public int getAttack() {
         return attack;
     }
 
-	/** Defense level getter. **/
+	/** Defense level getter.
+     * @return defense of the pokemon
+     **/
     public int getDefense() {
         return defense;
     }
 
-	/** Stamina level getter. **/
+	/** Stamina level getter.
+     * @return stamina of the pokemon
+     **/
     public int getStamina() {
         return stamina;
     }
