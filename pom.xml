@@ -101,7 +101,7 @@
                     <execution>
                         <phase>test</phase>
                         <goals>
-                            <goal>apidoc</goal>
+                            <goal>test-javadoc</goal>
                         </goals>
                         <configuration>
                             <outputDir>docs/</outputDir>
