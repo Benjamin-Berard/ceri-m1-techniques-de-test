@@ -73,16 +73,11 @@ jobs:
   docs-build:
     docker:
       - image: cimg/openjdk:17.0
-        user: root
     steps:
       - checkout
       - run:
           name: "Generate Doc"
           command:  mvn javadoc:javadoc
-      - persist_to_workspace:
-          root: .
-          paths:
-            - docs/
 
 workflows:
   version: 2
