@@ -50,9 +50,7 @@ jobs:
       - run:
           name: Build project
           command: mvn package
-      - run:
-          name: "Generate doc test"
-          command: mvn clean site
+
 
   docs-deploy:
     docker:
@@ -61,6 +59,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: docs/
+      - run:
+          name: "Generate doc test"
+          command: mvn clean site
       - run:
           name: Install and configure dependencies
           command: |
