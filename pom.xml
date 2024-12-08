@@ -93,36 +93,27 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.11.2</version>
-                <configuration>
-                    <reportOutputDirectory>docs</reportOutputDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.6.3</version>
                 <executions>
                     <execution>
-                        <id>copy-docs</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>add-resource</goal>
-                        </goals>
+                        <phase>test</phase>
                         <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/reports/apidocs</directory>
-                                    <targetPath>docs</targetPath>
-                                </resource>
-                            </resources>
+                            <reportOutputDirectory>docs</reportOutputDirectory>
                         </configuration>
+                        <goals>
+                            <goal>test-javadoc</goal>
+                        </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <doclint>none</doclint>
+                </configuration>
             </plugin>
+
         </plugins>
     </build>
 
