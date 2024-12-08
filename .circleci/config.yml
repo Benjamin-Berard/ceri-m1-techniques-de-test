@@ -50,6 +50,9 @@ jobs:
       - run:
           name: Build project
           command: mvn package
+      - run:
+          name: "Generate doc test"
+          command: mvn clean site
 
   docs-deploy:
     docker:
@@ -76,9 +79,6 @@ jobs:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
-      - run:
-          name: "Generate doc test"
-          command: mvn javadoc:javadoc
       - run:
           name: "Generate Doc"
           command: mvn site
