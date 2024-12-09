@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
+Vous allez à travers ces projets mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
 Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant la roadmap suivante : 
 - Setup du projet
 - Mise en place des outils d’intégration continue
@@ -28,6 +28,31 @@ Durant cette série de TPs, le gestionnaire de version Git sera utilisé à fois
 L'ensemble des sujets de TPs peut être trouvé dans le dossier `TPs`.
 
 Le dossier `src` contient la définition de l'ensemble des interfaces qui seront l'objet de vos travaux.
+
+## Rapport
+
+- Utilisation de hashmap pour mettre un nom sur un index (index 0 appartenant au nom MISSINGNO)
+
+- La methode generateRadomStat est mauvaise : elle crée un nouveau random sur chaque itération ce qui ralentit le programme pour rien,
+- le nombre d'itérations est ridiculement élevé, on pourrait facilement faire une boucle de 100 ou
+(si on veut pousser les proportions à se rapprocher des 50%, faire 10000 itérations avec une division par 100)
+
+- Le total va être la somme totale des randomint (chiffre entre 0 et 1) de chaque itération divisée par 10000.
+
+
+- Pour la methode createPokemon, par defaut, si nous mettons un index autre que ceux que notre hash map connait, nous utiliserons MISSINGNO.
+Si index < 0 (dans notre cas ça ne correspond qu'à Ash's Pikachu), les stat d'attaque, defense et stamina seront mises à 1000 est l'iv à 0.
+Sinon, nous génèrerons pour les 3 stats des nombres aléatoires (3x 1000000 itérations) est l'iv sera à 1.
+Cette methode retournera le nouveau pokémon crée.
+
+
+
+Les valeurs d'attaque, défense et stamina sont censées être bornées entre 0 et 15 + le niveau de l'individu, ce qui n'est pas le cas ici.
+
+Les iv sont cencés être un pourcentage de perfections aléatoire allant de 0 à 100% ce qui n'est pas le cas ici non plus.
+
+
+Les checkstyle n'étaient pas respectés (règles que j'ai imposé) : problème d'indentation et problème d'espaces entre les éléments (exemple i=0 -> i = 0)
 
 ## Choix techniques
 

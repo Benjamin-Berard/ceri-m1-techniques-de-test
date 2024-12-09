@@ -16,33 +16,24 @@ import static org.mockito.Mockito.when;
 public class RocketPokemonFactoryTest {
 
     Pokemon pokemon;
-
     Pokemon pokemon2;
-
     Pokemon pokemon3;
-
     RocketPokemonFactory rocketPokemonFactory;
 
     @BeforeEach
     void setUp()
     {
-        //when(pokemon.getName()).thenReturn("Bulbasaur");
         rocketPokemonFactory = new RocketPokemonFactory();
         pokemon = rocketPokemonFactory.createPokemon(-1,800,100,4000,4);
         pokemon2 = rocketPokemonFactory.createPokemon(0,1,1,0,1);
         pokemon3 = rocketPokemonFactory.createPokemon(1,613,64,4000,4);
-
-
-
     }
-
     @Test
     void shouldReturn1000ToStats()
     {
         assertEquals(1000,pokemon.getAttack());
         assertEquals(1000,pokemon.getStamina());
         assertEquals(1000,pokemon.getDefense());
-
     }
 
     @Test
@@ -59,5 +50,4 @@ public class RocketPokemonFactoryTest {
         assertEquals(0,pokemon.getIv());
         assertEquals(1,pokemon2.getIv());
     }
-
 }
