@@ -15,42 +15,42 @@ import static org.mockito.Mockito.when;
 public class IPokemonFactoryTest {
     @Mock
     private IPokemonFactory pokemonFactory;
-    private Pokemon pokedemon;
+    private Pokemon pokemon;
 
     @BeforeEach
     void setUp() {
-        pokedemon = new Pokemon(0, "Bulbizarre", 126, 126, 90,613,64,4000,4,56);
+        pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90,613,64,4000,4,56);
     }
 
 
     @Test
     public void shouldReturnIPokedexWhenCreatePokedex() {
-        when(pokemonFactory.createPokemon(1,500,200,2,1)).thenReturn(pokedemon);
-        assertEquals(pokedemon,pokemonFactory.createPokemon(1,500,200,2,1));
+        when(pokemonFactory.createPokemon(1,500,200,2,1)).thenReturn(pokemon);
+        assertEquals(pokemon,pokemonFactory.createPokemon(1,500,200,2,1));
     }
 
     @Test
     void shouldReturnCorrectCp() {
-        assertEquals(613, pokedemon.getCp());
+        assertEquals(613, pokemon.getCp());
     }
 
     @Test
     void shouldReturnCorrectHp() {
-        assertEquals(64, pokedemon.getHp());
+        assertEquals(64, pokemon.getHp());
     }
 
     @Test
     void shouldReturnCorrectDust() {
-        assertEquals(4000, pokedemon.getDust());
+        assertEquals(4000, pokemon.getDust());
     }
 
     @Test
     void shouldReturnCorrectDefense() {
-        assertEquals(4, pokedemon.getCandy());
+        assertEquals(4, pokemon.getCandy());
     }
 
     @Test
     void shouldReturnCorrectStamina() {
-        assertEquals(56, pokedemon.getIv());
+        assertEquals(56, pokemon.getIv());
     }
 }
