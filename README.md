@@ -31,6 +31,8 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 
 ## Rapport
 
+- Pour les tests, comme j'avais mocké le IPokemonFatory, le remplacer par RocketPokemonFactory n'a pas eu d'incident sur mes test.
+
 - Utilisation de hashmap pour mettre un nom sur un index (index 0 appartenant au nom MISSINGNO)
 
 - La methode generateRadomStat est mauvaise : elle crée un nouveau random sur chaque itération ce qui ralentit le programme pour rien,
@@ -41,9 +43,9 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 
 
 - Pour la methode createPokemon, par defaut, si nous mettons un index autre que ceux que notre hash map connait, nous utiliserons MISSINGNO.
-Si index < 0 (dans notre cas ça ne correspond qu'à Ash's Pikachu), les stat d'attaque, defense et stamina seront mises à 1000 est l'iv à 0.
-Sinon, nous génèrerons pour les 3 stats des nombres aléatoires (3x 1000000 itérations) est l'iv sera à 1.
-Cette methode retournera le nouveau pokémon crée.
+  Si index < 0 (dans notre cas ça ne correspond qu'à Ash's Pikachu), les stat d'attaque, defense et stamina seront mises à 1000 est l'iv à 0.
+  Sinon, nous génèrerons pour les 3 stats des nombres aléatoires (3x 1000000 itérations) est l'iv sera à 1.
+  Cette methode retournera le nouveau pokémon crée.
 
 
 
