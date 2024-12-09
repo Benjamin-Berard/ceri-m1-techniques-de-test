@@ -51,7 +51,6 @@ Les valeurs d'attaque, défense et stamina sont censées être bornées entre 0 
 
 Les iv sont cencés être un pourcentage de perfections aléatoire allant de 0 à 100% ce qui n'est pas le cas ici non plus.
 
-
 Les checkstyle n'étaient pas respectés (règles que j'ai imposé) : problème d'indentation et problème d'espaces entre les éléments (exemple i=0 -> i = 0)
 
 ## Choix techniques
