@@ -39,9 +39,9 @@ public class RocketPokemonFactoryTest {
     @Test
     void shouldReturn1000ToStats()
     {
-        assertEquals(1000,pokemon2.getAttack());
-        assertEquals(1000,pokemon2.getStamina());
-        assertEquals(1000,pokemon2.getDefense());
+        assertEquals(1000,pokemon.getAttack());
+        assertEquals(1000,pokemon.getStamina());
+        assertEquals(1000,pokemon.getDefense());
 
     }
 
