@@ -6,7 +6,14 @@ import java.util.Random;
 
 import org.apache.commons.collections4.map.UnmodifiableMap;
 
+/**
+ * New class from the rocket team that implements IPokemonFactory
+ */
 public class RocketPokemonFactory implements IPokemonFactory {
+
+    public RocketPokemonFactory() {
+
+    }
 
     private static Map<Integer, String> index2name;
     static
