@@ -11,11 +11,14 @@ public  class PokemonMetadataProvider implements  IPokemonMetadataProvider {
     static List<PokemonMetadata> pokemonMetadata = new ArrayList<>();
     PokemonMetadata pokemondata = new PokemonMetadata(0,"Bulbizarre",126,126,90);
 
+
     /**
-     * construct that initialise the pokemonmetadata list
+     * construct that initialize the pokemonmetadata list
      */
     public PokemonMetadataProvider() {
+
         pokemonMetadata.add(pokemondata);
+        pokemonMetadata.add(new PokemonMetadata(5,"salamèche",100,100,100));
     }
 
     /**

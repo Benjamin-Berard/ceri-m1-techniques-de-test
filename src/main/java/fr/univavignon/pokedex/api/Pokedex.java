@@ -8,6 +8,11 @@ import java.util.List;
  * Class that implements IPokedex
  */
 public class Pokedex implements IPokedex {
+    List<Pokemon> pokemons = new ArrayList<>();
+    PokemonFactory pokemonFactory;
+    PokemonMetadataProvider pokemonMetadataProvider;
+
+    RocketPokemonFactory rocketPokemonFactory;
     /**
      * Constructor for the Pokedex CLASS
      * @param pokemonFactory to initiate pokemonFactory
@@ -17,10 +22,12 @@ public class Pokedex implements IPokedex {
         this.pokemonFactory =  pokemonFactory;
         this.pokemonMetadataProvider = pokemonMetadataProvider;
     }
+    public Pokedex(RocketPokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {
+        this.rocketPokemonFactory =  pokemonFactory;
+        this.pokemonMetadataProvider = pokemonMetadataProvider;
+    }
 
-    List<Pokemon> pokemons = new ArrayList<>();
-    PokemonFactory pokemonFactory;
-    PokemonMetadataProvider pokemonMetadataProvider;
+
     @Override
     public int size() {
         return pokemons.size();
@@ -57,6 +64,11 @@ public class Pokedex implements IPokedex {
 
         return pokemonFactory.createPokemon(index,cp,hp,dust,candy);
     }
+    public Pokemon createPokemon2(int index, int cp, int hp, int dust, int candy) {
+
+        return rocketPokemonFactory.createPokemon(index,cp,hp,dust,candy);
+    }
+
 
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
