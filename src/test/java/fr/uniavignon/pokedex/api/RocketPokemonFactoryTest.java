@@ -9,8 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Comparator;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class RocketPokemonFactoryTest {
@@ -50,4 +49,21 @@ public class RocketPokemonFactoryTest {
         assertEquals(0,pokemon.getIv());
         assertEquals(1,pokemon2.getIv());
     }
+
+    @Test
+    void shouldGenerateStatsInRange() {
+        Pokemon generatedPokemon = rocketPokemonFactory.createPokemon(1, 613, 64, 4000, 4);
+        assertTrue(generatedPokemon.getAttack() >= 0 && generatedPokemon.getAttack() <= 100);
+        assertTrue(generatedPokemon.getDefense() >= 0 && generatedPokemon.getDefense() <= 100);
+        assertTrue(generatedPokemon.getStamina() >= 0 && generatedPokemon.getStamina() <= 100);
+    }
+    @Test
+    void shouldGenerateStatQuickly() {
+        long startTime = System.currentTimeMillis();
+        rocketPokemonFactory.createPokemon(1, 613, 64, 4000, 4);
+        long duration = System.currentTimeMillis() - startTime;
+        assertTrue(duration < 150);
+    }
+
+
 }
