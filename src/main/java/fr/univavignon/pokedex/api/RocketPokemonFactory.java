@@ -11,10 +11,16 @@ import org.apache.commons.collections4.map.UnmodifiableMap;
  */
 public class RocketPokemonFactory implements IPokemonFactory {
 
+    /**
+     * RocketPoekmonFactory construct
+     */
     public RocketPokemonFactory() {
 
     }
 
+    /**
+     * Define the map for the pokemons
+     */
     private static Map<Integer, String> index2name;
     static
     {
@@ -25,7 +31,11 @@ public class RocketPokemonFactory implements IPokemonFactory {
         //TODO : Gotta map them all !
         index2name = UnmodifiableMap.unmodifiableMap(aMap);
     }
-	
+
+    /**
+     * generate a random stat between 0 and 100
+     * @return the sum of every loop
+     */
     private static int generateRandomStat() {
         int total = 0;
         for (int i = 0; i < 1000000; i++)
@@ -37,6 +47,15 @@ public class RocketPokemonFactory implements IPokemonFactory {
         return total / 10000;
     }
 
+    /**
+     * Create a pokemon
+     * @param index Pokemon index.
+     * @param cp Pokemon CP.
+     * @param hp Pokemon HP.
+     * @param dust Required dust for upgrading pokemon.
+     * @param candy Required candy for upgrading pokemon.
+     * @return the created pokemon
+     */
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         String name;

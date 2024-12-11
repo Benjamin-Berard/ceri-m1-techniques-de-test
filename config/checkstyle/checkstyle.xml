@@ -12,5 +12,18 @@
         <module name="WhitespaceAround"/>
         <module name="AvoidStarImport"/>
         <module name="UnusedImports"/>
+        <module name="JavadocType">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="JavadocMethod">
+            <property name="scope" value="protected"/>
+            <property name="allowMissingParamTags" value="false"/>
+            <property name="allowMissingReturnTag" value="false"/>
+        </module>
+
+        <module name="JavadocVariable">
+            <property name="scope" value="public"/>
+        </module>
     </module>
 </module>
