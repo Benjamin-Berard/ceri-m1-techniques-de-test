@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#fr.univavignon.pokedex.api.RocketPokemonFactory.java">fr/univavignon/pokedex/api/RocketPokemonFactory.java</a>
+                  <a href="${project.url}/checkstyle.html#fr.univavignon.pokedex.api.PokemonFactory.java">fr/univavignon/pokedex/api/PokemonFactory.java</a>
                 </td>
                 <td>
                   0

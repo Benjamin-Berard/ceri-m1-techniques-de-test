@@ -22,6 +22,12 @@ public class Pokedex implements IPokedex {
         this.pokemonFactory =  pokemonFactory;
         this.pokemonMetadataProvider = pokemonMetadataProvider;
     }
+
+    /**
+     * Redefine class to suits RocketPokemonFactory
+     * @param pokemonFactory rocketpokemonfactory class
+     * @param pokemonMetadataProvider pokemon metadataprovider class
+     */
     public Pokedex(RocketPokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {
         this.rocketPokemonFactory =  pokemonFactory;
         this.pokemonMetadataProvider = pokemonMetadataProvider;
@@ -64,6 +70,16 @@ public class Pokedex implements IPokedex {
 
         return pokemonFactory.createPokemon(index,cp,hp,dust,candy);
     }
+
+    /**
+     * creation of pokemon using rocketpokemonfactory
+     * @param index the pokemon index
+     * @param cp the pokemon cp
+     * @param hp the pokemon hp
+     * @param dust the pokemon dust
+     * @param candy the pokemon candy
+     * @return pokemon
+     */
     public Pokemon createPokemon2(int index, int cp, int hp, int dust, int candy) {
 
         return rocketPokemonFactory.createPokemon(index,cp,hp,dust,candy);

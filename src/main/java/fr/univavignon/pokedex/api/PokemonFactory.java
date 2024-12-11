@@ -33,9 +33,9 @@ public class PokemonFactory implements IPokemonFactory {
         System.out.println(def);
         double stam = random.nextInt(15);
         System.out.println(stam);
-        double iv = ((att+def+stam)/45)*100;
+        double iv = ( ( att + def + stam ) / 45 ) * 100;
 
-        return new Pokemon(index,p.getName(),p.getAttack()+(int) att,p.getDefense()+ (int) def,p.getStamina()+(int) stam,cp,hp,dust,candy,iv);
+        return new Pokemon(index,p.getName(),p.getAttack() + (int) att,p.getDefense() + (int) def,p.getStamina() + (int) stam,cp,hp,dust,candy,iv);
     }
 
 
