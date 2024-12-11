@@ -11,7 +11,6 @@ public class PokemonFactory implements IPokemonFactory {
      */
     public PokemonFactory () {
     }
-    PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
 
     /**
      * Create a new pokemon
@@ -24,7 +23,7 @@ public class PokemonFactory implements IPokemonFactory {
      */
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-        //PokemonMetadataProvider.addPokemonMetadata(5);
+
         PokemonMetadata p = PokemonMetadataProvider.pokemonMetadata.get(5);
         Random random = new Random();
         double att = random.nextInt(15);
@@ -34,8 +33,8 @@ public class PokemonFactory implements IPokemonFactory {
         double stam = random.nextInt(15);
         System.out.println(stam);
         double iv = ( ( att + def + stam ) / 45 ) * 100;
-
         return new Pokemon(index,p.getName(),p.getAttack() + (int) att,p.getDefense() + (int) def,p.getStamina() + (int) stam,cp,hp,dust,candy,iv);
+
     }
 
 
