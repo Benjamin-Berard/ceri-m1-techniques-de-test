@@ -7,6 +7,7 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/Q2JoH7tbPcB6HPzmCXXcH4/7hptH5Rhz3q7NUVoB6yYSH/tree/master)
 [![codecov](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test/graph/badge.svg?token=BJRUHKY4FO)](https://codecov.io/gh/Benjamin-Berard/ceri-m1-techniques-de-test)
 ![Checkstyle](target/site/badges/checkstyle-result.svg)
+[![Javadoc](https://img.shields.io/badge/Javadoc-Online-blue)](https://benjamin-berard.github.io/ceri-m1-techniques-de-test/apidocs/)
 
 
 ## Introduction
@@ -31,7 +32,7 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 
 ## Rapport
 
-- Pour les tests, comme j'avais mocké le IPokemonFatory, le remplacer par RocketPokemonFactory n'a pas eu d'incident sur mes test.
+- Pour les tests, j'utilisais un mock sur IPokemonFactory mais quand je refactorais cette déclaration en RocketPokemonFactory ça me mettait un problème de compatibilité
 
 - Utilisation de hashmap pour mettre un nom sur un index (index 0 appartenant au nom MISSINGNO)
 

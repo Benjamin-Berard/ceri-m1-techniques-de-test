@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class RocketPokemonFactoryTest {
 
-   /* Pokemon pokemon;
+    Pokemon pokemon;
     Pokemon pokemon2;
     Pokemon pokemon3;
     RocketPokemonFactory rocketPokemonFactory;
@@ -49,5 +49,5 @@ public class RocketPokemonFactoryTest {
     {
         assertEquals(0,pokemon.getIv());
         assertEquals(1,pokemon2.getIv());
-    }*/
+    }
 }
