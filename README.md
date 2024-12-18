@@ -32,7 +32,7 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 
 ## Rapport
 
-- Pour les tests, le seul qui n'a pas marché était celui qui devait retourner salamèche à l'index 0 (comme c'est un index inconnu dans notre rocketpokemonfactory il retounr missingno)
+- Pour les tests, le seul qui n'a pas marché était celui qui devait retourner salamèche à l'index 0 (comme c'est un index inconnu dans notre rocketpokemonfactory il retourne missingno)
 
 - Utilisation de hashmap pour mettre un nom sur un index (index 0 appartenant au nom MISSINGNO)
 
